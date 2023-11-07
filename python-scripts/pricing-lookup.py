@@ -152,10 +152,11 @@ except Exception as e:
 #ss_GiB_mon_rate = ss_dict2['pricePerUnit']['USD']
 
 #ss_GiB_mon_rate = (json.dumps(pricing_info['terms']['OnDemand']['EZ8T7N34G3H5Y4ER.JRTCKXETXF']['priceDimensions']['EZ8T7N34G3H5Y4ER.JRTCKXETXF.6YS6EN2CT7']['pricePerUnit']['USD'])).replace('"', '')
+
+## Print results
 print("SnapShot GiB/Mo: " + ss_GiB_mon_rate)
 print("EBS gp3 GiB/Mo: " + str(ebs_name_map['gp3']))
 print("EC2 hourly rate for " + instanceType + ": " + results)
-
 print('Monthly:')
 ss_total = float(ss_GiB_mon_rate)*75
 ebs_total = ebs_name_map['gp3']*50
